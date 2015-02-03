@@ -5,46 +5,34 @@ public class Strand
 	// An ArrayList that stores a strand of lights
 	private ArrayList<Light> strand = new ArrayList<Light>();
 
-	// Default constructor that sets strand to an ArrayList holding one
-	// turned on white bulb, that is not burnt out.
 	public Strand()
 	{
-		/* missing code */
+		strand.add(new Light());
 	}
 
-	// A constructor that sets strand to an ArrayList of size n, holding
-	// n white bulbs, that are all turned on and not burnt out. If n <= 0,
-	// then the strand should be set to size one, with a white bulb, on
-	// and not burnt out.
 	public Strand(int n)
 	{
-		/* missing code */
+		for (int i = 0; i <n; i++){
+			strand.add(i, new Light());
+		}
 	}
 
-	// This method returns a String representation of the
-	// Light objects in the ArrayList, one per line. For example,
-	// here is the String returned when toString is called on a
-	// Strand with 5 lights:
-	//
-	// on green    not burnt out
-	// off red    not burnt out
-	// off green    burnt out
-	// on blue    not burnt out
-	// on red    not burnt out
-	//
-	// Note: there is one space between "off"/"on" and the value for
-	// color, and a tab before the "burnt out" or "not burnt out".
-	public String toString()
-	{
-		/* missing code (don't forget to update the return statement) */
-		return "";
+	public String toString() {
+		String s = "";
+		for (Light l : strand) {
+			s = s + l.toString() + '\n';
+		}
+		return s;
 	}
 
 	// This method sets the color of all the light bulbs in the entire Strand.
 	public void setColor(String c)
 	{
-
-		/* missing code */
+		if (c.equals("blue") || c.equals("red") || c.equals("green") || c.equals("white")) {
+			for (Light l : strand) {
+				l.setColor(c);
+			}
+		}
 	}
 
 	// This method sets the light bulbs to the pattern "red", "green", "blue",
