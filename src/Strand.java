@@ -64,10 +64,9 @@ public class Strand
 
 	public void turnOn()
 	{
-		for (Light l: strand){
-			if (!l.burntOut)
-				if (!l.isOn())
-					l.flip();
+		for (Light l: strand) {
+			if (!l.isOn())
+				l.flip();
 		}
 	}
 
