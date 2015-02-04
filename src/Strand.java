@@ -35,18 +35,33 @@ public class Strand
 		}
 	}
 
-	// This method sets the light bulbs to the pattern "red", "green", "blue",
-	// "red", "green", "blue",... until the end of the strand.
+
 	public void setMulti()
 	{
-		/* missing code */
+		for (int i = 1; i<=strand.size(); i++){
+			int remainder = i%3;
+			switch (remainder){
+				case 1:
+					strand.get(i-1).setColor("red");
+					break;
+				case 2:
+					strand.get(i-1).setColor("green");
+					break;
+				case 0:
+					strand.get(i-1).setColor("blue");
+					break;
+
+			}
+		}
 	}
 
-	// This method turns on all the lights in the strand. Each individual bulb
-	// can only be turned on if it's burntOut variable is false.
 	public void turnOn()
 	{
-		/* missing code */
+		for (Light l: strand){
+			if (!l.burntOut)
+				if (!l.isOn())
+					l.flip();
+		}
 	}
 
 	// This method turns off all the lights in the strand.
