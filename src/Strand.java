@@ -64,16 +64,17 @@ public class Strand
 		}
 	}
 
-	// This method turns off all the lights in the strand.
 	public void turnOff()
 	{
-		/* missing code */
+		for (Light l: strand){
+			if (l.isOn())
+				l.flip();
+		}
 	}
 
-	// This method sets the Light at location i’s burntOut variable to true.
 	public void burnOut(int i)
 	{
-		/* missing code */
+		strand.get(i).burnOut();
 	}
 
 	public static void main(String[] args)
