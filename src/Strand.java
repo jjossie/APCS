@@ -12,9 +12,13 @@ public class Strand
 
 	public Strand(int n)
 	{
-		for (int i = 0; i <n; i++){
-			strand.add(i, new Light());
+		if (n >0){
+			for (int i = 0; i <n; i++){
+				strand.add(i, new Light());
+			}
 		}
+		else
+			strand.add(new Light());
 	}
 
 	public String toString() {
@@ -25,7 +29,6 @@ public class Strand
 		return s;
 	}
 
-	// This method sets the color of all the light bulbs in the entire Strand.
 	public void setColor(String c)
 	{
 		if (c.equals("blue") || c.equals("red") || c.equals("green") || c.equals("white")) {
@@ -33,6 +36,10 @@ public class Strand
 				l.setColor(c);
 			}
 		}
+		else
+			for (Light l : strand){
+				l.setColor("white");
+			}
 	}
 
 
