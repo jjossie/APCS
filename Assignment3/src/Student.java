@@ -17,4 +17,5 @@ public class Student extends Person{
 		str = lname + ", " + fname + "\n   Grade Level: " + grade + "\n   ID #: " + id;
 		return str;
 	}
+
 }
