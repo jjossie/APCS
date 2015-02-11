@@ -6,6 +6,9 @@ public class Person {
 		fname = f;
 		lname = l;
 	}
+	public Person(){
+		this("","");
+	}
 	public String toString(){
 		return "" + lname + ", " + fname;
 	}
