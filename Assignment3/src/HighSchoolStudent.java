@@ -7,4 +7,9 @@ public class HighSchoolStudent extends Student {
 		else
 			this.gpa = 0;
 	}
+	public String toString(){
+		String str;
+		str = super.toString() + "\n   GPA: " + gpa;
+		return str;
+	}
 }
