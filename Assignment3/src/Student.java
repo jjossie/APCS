@@ -2,7 +2,7 @@
 public class Student extends Person{
 	private int grade;
 	private int id;
-	private static int currentID = 0;
+	private static int currentID = 1;
 	public Student(String f, String l, int g){
 		super(f, l);
 		grade = g;
