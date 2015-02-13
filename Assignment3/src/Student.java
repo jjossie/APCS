@@ -14,7 +14,7 @@ public class Student extends Person{
 	}
 	public String toString(){
 		String str;
-		str = lname + ", " + fname + "\n   Grade Level: " + grade + "\n   ID #: " + id;
+		str = super.toString() + "\n   Grade Level: " + grade + "\n   ID #: " + id;
 		return str;
 	}
 
