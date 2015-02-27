@@ -43,10 +43,23 @@ public class Time implements Comparable
 
 		return "" + h + "" + m;
 	}
-	public int compareTo(Object obj){
+	public int compareTo(Time t){
 		int x = 0;
-
+		if (this.hour < t.hour){
+			x = -1;
+		}else if (this.hour > t.hour){
+			x = 1;
+		}else {
+			if (this.minute<t.minute){
+				x = -1;
+			}
+			else if (this.minute>t.minute){
+				x = 1;
+			}else
+				x = 0;
+		}
 		return x;
 	}
+
 
 }
